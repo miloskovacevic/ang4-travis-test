@@ -8,7 +8,7 @@ describe('vote component', () => {
         comp =  new VoteComponent();
     });
 
-    it('should increment totalVote when upvoted', () => {
+    xit('should increment totalVote when upvoted', () => {
         // Act
         comp.upVote();
 
@@ -16,7 +16,7 @@ describe('vote component', () => {
         expect(comp.totalVotes).toBe(1);
     });
 
-    it('should decrement totalVote when downvoted', () => {
+    xit('should decrement totalVote when downvoted', () => {
         // Act
         comp.downVote();
 

@@ -8,12 +8,12 @@ describe('TodoFormComponent', () => {
     component = new TodoFormComponent(new FormBuilder());
   });
 
-  it('should create a form with 2 controls', () => {
+  xit('should create a form with 2 controls', () => {
     expect(component.form.contains('name')).toBeTruthy();
     expect(component.form.contains('email')).toBe(true);
   });
 
-  it('should make a name control required', () => {
+  xit('should make a name control required', () => {
     const control = component.form.get('name');
 
     control.setValue('');

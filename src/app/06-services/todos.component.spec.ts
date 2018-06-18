@@ -16,7 +16,7 @@ describe('TodosComponent', () => {
       component = new TodosComponent(service);
   });
 
-  it('should set todos from server', () => {
+  xit('should set todos from server', () => {
     let todos = [1, 2, 3, 7, 9];
     // arange
     spyOn(service, 'getTodos').and.callFake(() => {
@@ -32,7 +32,7 @@ describe('TodosComponent', () => {
   });
 
 
-  it('should call the server to save the changes when a new todo item is added', () => {
+  xit('should call the server to save the changes when a new todo item is added', () => {
     // arange
     let spy = spyOn(service, 'add').and.callFake((t) => {
         return Observable.empty();
@@ -44,7 +44,7 @@ describe('TodosComponent', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should add the new todo returned from server', () => {
+  xit('should add the new todo returned from server', () => {
     let todo = {id: 1};
     // arange
     // 1.nacin
@@ -61,7 +61,7 @@ describe('TodosComponent', () => {
   });
 
 
-   it('should set the message property if server returns an error when adding a new todo', () => {
+   xit('should set the message property if server returns an error when adding a new todo', () => {
     let errorMessage = 'error from the server';
     let spy = spyOn(service, 'add').and.returnValue(Observable.throw(errorMessage));
 
@@ -71,7 +71,7 @@ describe('TodosComponent', () => {
     expect(component.message).toBe(errorMessage);
   });
 
-  it('it should call the server to delete a todo item if the user confirms', () => {
+  xit('it should call the server to delete a todo item if the user confirms', () => {
 
     //arange
     spyOn(window, 'confirm').and.returnValue(true);
@@ -84,7 +84,7 @@ describe('TodosComponent', () => {
     expect(spy).toHaveBeenCalledWith(2);
   });
 
-  it('it should NOT call the server to delete a todo item if the user NOT confirms', () => {
+  xit('it should NOT call the server to delete a todo item if the user NOT confirms', () => {
 
     //arange
     spyOn(window, 'confirm').and.returnValue(false);

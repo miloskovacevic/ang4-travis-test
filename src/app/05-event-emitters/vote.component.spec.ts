@@ -7,7 +7,7 @@ describe('VoteComponent event emmiter', () => {
     component = new VoteComponent();
   });
 
-  it('should raise voteChanged event when upvoted!', () => {
+  xit('should raise voteChanged event when upvoted!', () => {
     let totalVotes = null;
     component.voteChanged.subscribe(tv => {
         totalVotes = tv;
